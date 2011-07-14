@@ -1,6 +1,6 @@
 = asn_translate
 
-Description goes here.
+Translates an Autonomous System number into it's assigned organization.
 
 == Contributing to asn_translate
  
