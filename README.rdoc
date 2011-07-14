@@ -3,7 +3,7 @@
 Translates an Autonomous System number into its assigned organization. Assumes local Redis is running.
 
     >> ASNTranslate.translate_asn(32244)
-	=> "LIQUID-WEB-INC - Liquid Web, Inc."
+    => "LIQUID-WEB-INC - Liquid Web, Inc."
 
 == Contributing to asn_translate
  
