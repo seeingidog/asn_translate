@@ -3,6 +3,8 @@ R = Redis.new
 
 class ASNTranslate
 
+  #
+  # Parse ASN flat text file
   def build_list
     @asns = {}
     File.open("./asn.txt").each { |line|
@@ -16,6 +18,8 @@ class ASNTranslate
     return @asns
   end
 
+  #
+  # Add to Redis
   def add_db
     R['asn_list'] = "yes"
     build_list.each do |k,v|
@@ -23,6 +27,8 @@ class ASNTranslate
     end
   end
 
+  #
+  # Search database for key, return String result
   def self.translate_asn(asn)
     if R['asn_list'] == nil
       add_db
